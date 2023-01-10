@@ -1,16 +1,34 @@
-# This is a sample Python script.
+class Category:
+    def __init__(self,name,parent=None)->None:
+        self.name = name
+        self.parent = parent
+        self.display_name = self.name
+        self.set_display_name()
+    def display_category(self):
+        print(self.display_name)
+    def set_display_name(self):
+        obj = self
+        while(obj.parent!=None):
+            self.display_name = f'{obj.parent.name} > {self.display_name}'
+            obj = obj.parent
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Parent Categories
+vehicle = Category("Vehicle")
+electronics = Category("Electronics")
 
+#Level1
+car = Category('Car',vehicle)
+tv = Category('Television',electronics)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hiiii, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#Level2
+petrol = Category('Petrol',car)
+sony = Category('Sony',tv)
 
+#Level3
+bmw = Category('BMW',petrol)
+audi = Category('Audi',petrol)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+category_list = [vehicle,electronics,car,tv,petrol,sony,bmw,audi]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+for category in category_list:
+    category.display_category()

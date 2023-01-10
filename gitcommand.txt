@@ -1,0 +1,15 @@
+Code: Token
+-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
+
+1. git status:- To view local files status from git
+2. git add main.py <filename>:- to add one particular file to git
+3. git commit -m "main.py pushed":- to add changes in file
+4. Username and email:-git config --global user.email "you@example.com"(git config --global user.email "aratim.reliution@gmail.com")
+  		       git config --global user.name "Your Name"(git config --global user.name "arati1811")
+5. git commit -m "main.py pushed":- for commit changes in file
+6. git branch -M main:- to push on branch
+7. git remote -v:- to check remote is added or not
+8. git remote add origin https://github.com/aratim1811/python_exe.git:- 
+9. git push -u origin main:-
+10. git push origin main:- push files into git
+11. git add .:- to add folders all files to git
