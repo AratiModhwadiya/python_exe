@@ -97,7 +97,7 @@ class category :
 
 
 class product(category) :
-    def __init__(self, name, code, price, category,parent,display_name,products) :
+    def __init__(self, name, code, price, category) :
         self.name = name
         self.code = code
         self.price = price
