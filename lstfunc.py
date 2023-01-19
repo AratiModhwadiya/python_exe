@@ -85,5 +85,3 @@ while True :
     else :
         print("Quite")
         break
-
-        """git status"""
